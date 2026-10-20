@@ -23,8 +23,17 @@ Las tareas, actividades, entregas, hábitos, perfil, objetivos y sesiones de con
 
 ## Personalizar la apariencia
 
-Abre **Ajustes → Paleta de colores** para elegir entre la paleta base rojo/crema, Bosque/salvia o Tierra/ámbar. La selección se conserva en el navegador. En móvil, toca ☰ para desplegar la navegación. El dashboard anima la entrada de datos con efecto de máquina de escribir y respeta la preferencia de movimiento reducido del sistema.
+Abre **Ajustes → Paleta de colores** para elegir entre la paleta Carmesí, Bosque/salvia, Tierra/ámbar, Océano/turquesa o Azul/arcade. La selección se conserva en el navegador. En móvil, toca ☰ para desplegar la navegación. El dashboard anima la entrada de datos con efecto de máquina de escribir y respeta la preferencia de movimiento reducido del sistema.
 
 
 
 En móvil, el texto del menú y los controles tiene un mínimo de 11 px. El aside usa Pixelify Sans y el header tiene una trama de píxeles CSS.
+
+En **Ajustes → Tamaño del texto** puedes ampliar el contenido móvil entre 100 % y 150 %. El menú lateral mantiene una escala independiente.
+
+
+## Asistente virtual NOVA
+
+El acceso junto al título del dashboard abre un chat local que responde consultas sobre tareas, citas, entregas y hábitos a partir de los datos guardados en la aplicación. El avatar está guardado en ssets/robot-face.jpg, recortado de la imagen proporcionada. NOVA funciona sin enviar tus datos a un servicio externo.
+
+El asistente también muestra globos de cómic breves con saludos, consejos y curiosidades de forma ocasional mientras el dashboard está abierto.
