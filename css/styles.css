@@ -15,3 +15,34 @@ body,header,aside,.panel,.card,button,.task,.evt,.pixel,.month>div,.user b{trans
 /* Quantico: letras más grandes, oscuras y con sabor arcade */
 :root{--pixel:"Quantico",Consolas,"Fira Code",monospace;--sans:"Quantico",Consolas,"Fira Code",monospace}
 body{font-family:var(--sans);font-size:17.5px;font-weight:600;line-height:1.55}button,input,select,textarea{font-family:var(--sans);font-weight:700}main{font-size:17.5px}main p{font-size:1em;line-height:1.65}main .heading p{font-size:1em}main .hero p,main .card p{font-size:15px}main .heading small,main .bar,main .sidetitle{font-size:11px;font-weight:700}main .task strong{font-size:15px;font-weight:700}main .task small{font-size:10px;font-weight:700}main .card h3{font-size:15px;font-weight:700}main .rings b{font-size:15px}main .rings small{font-size:9px}.filters input,.filters select,.settings-card input,.modal-body input,.modal-body select,.modal-body textarea{font-size:16px;font-weight:600}button{font-size:12px;font-weight:700}nav button{font-size:16px;font-weight:700}.pixel{font-size:11px}.pixel small{font-size:9px}.arcade-icons{display:flex;align-items:center;gap:5px;color:var(--gl);margin-left:7px}.arcade-icons span{width:25px;height:25px;display:grid;place-items:center;background:var(--gd);border:2px solid var(--o);box-shadow:2px 2px var(--ink);font:700 14px var(--pixel);text-shadow:1px 1px var(--ink)}.arcade-icons span:nth-child(even){color:var(--ol)}.brand{font-weight:700;white-space:nowrap}.brand small{font-size:9px}@media(max-width:1000px){.arcade-icons{gap:3px}.arcade-icons span{width:22px;height:22px;font-size:12px}nav button{font-size:14px}}@media(max-width:700px){body{font-size:17.5px}.arcade-icons{gap:2px;margin-left:0}.arcade-icons span{width:19px;height:19px;font-size:10px}.brand{font-size:10px}.brand small{font-size:7px}main .heading p{font-size:14px}main .task strong{font-size:14px}main .task small{font-size:10px}main .bar{font-size:10px}nav button{font-size:14px}}
+
+/* Menú móvil con panel visible, botones grandes y contraste claro */
+@media(max-width:700px){
+ header{height:60px;min-height:60px;padding:0 10px;gap:7px;justify-content:flex-start;overflow:visible}
+ header #clock,header>[data-view="settings"]{display:none}
+ header .brand{font-size:11px;line-height:1.25;flex:0 0 auto}
+ header .arcade-icons{flex:1;justify-content:center}
+ header button[data-action="new-task"]{font-size:0;min-width:38px;width:38px;height:38px;padding:0;display:grid;place-items:center}
+ header button[data-action="new-task"]::before{content:"＋";font:700 21px var(--pixel)}
+ body aside{display:none;position:fixed;top:60px;left:0;right:auto;bottom:0;width:min(310px,86vw);height:calc(100dvh - 60px);padding:20px 15px;background:var(--paper);border-right:3px solid var(--ink);box-shadow:8px 0 0 #00304955;z-index:201;transform:translateX(-105%);transition:transform .3s cubic-bezier(.2,.8,.2,1)}
+ body.mobile-nav-open aside{display:flex;transform:translateX(0)}
+ body.mobile-nav-open::after{content:"";position:fixed;inset:60px 0 0;background:#111a;z-index:200}
+ body aside .sidetitle{display:block;color:var(--gd);font-size:12px;padding:5px 8px 15px;border-bottom:1px dashed var(--muted)}
+ body aside nav{display:flex;flex-direction:column;align-items:stretch;gap:6px;padding-top:14px;overflow:auto}
+ body aside nav button{display:flex;align-items:center;justify-content:flex-start;gap:12px;width:100%;min-height:48px;padding:10px 12px;background:transparent;color:var(--ink);border:1px solid transparent;border-left:4px solid transparent;text-align:left;font:700 17px/1.35 var(--sans);white-space:normal;box-shadow:none}
+ body aside nav button.active{background:var(--ink);color:var(--c);border-left-color:var(--o)}
+ body aside nav button:hover{background:var(--c);color:var(--ink)}
+ body aside nav i{margin-left:auto;float:none;font-size:12px}
+ body aside .user{display:flex;margin-top:auto;color:var(--ink);min-height:60px}
+ main{margin:0;width:100%;max-width:none;padding:18px 12px 92px;font-size:17px;overflow-x:hidden}
+ .heading{display:flex;flex-wrap:wrap;gap:8px;align-items:flex-start}.heading>div:first-child{flex:1 0 100%}.heading>button{font-size:12px;padding:10px 12px}
+ .grid{grid-template-columns:minmax(0,1fr)}.grid>.panel,.hero{grid-column:1;min-width:0}.hero-inner{gap:10px}.hero-inner>div:first-child{min-width:0}.pixel{flex:0 0 112px}
+ .filters{grid-template-columns:minmax(0,1fr);display:grid}.filters input{grid-column:auto;width:100%}.filters select{width:100%}
+ .cards{grid-template-columns:minmax(0,1fr)}.panel,.card{min-width:0}.pad{padding:13px}
+ .caltools{flex-wrap:wrap}.caltools h2{min-width:100%;order:5}.month>div{min-width:0}.month .chip{max-width:100%;font-size:8px}.calendarGrid{max-width:100%;overflow:hidden}
+ .profile-card,.profile-card>div{max-width:100%;flex-wrap:wrap}.profile-card .cards{grid-template-columns:1fr}
+ .settings-actions{flex-wrap:wrap}.themes{display:grid;grid-template-columns:1fr}.themes button{min-height:44px}
+ dialog{max-width:calc(100vw - 20px);max-height:88dvh}#modalBody{max-height:65dvh}.formgrid{grid-template-columns:1fr}
+}
+@media(max-width:380px){header{gap:5px;padding:0 7px}.brand{font-size:10px}.arcade-icons{gap:1px}.arcade-icons span{width:17px;height:17px;font-size:9px}.mobile-menu{width:36px;min-width:36px}.hero h2{font-size:15px}.pixel{flex-basis:100px}.rings>div{width:64px;height:64px}}
+@media(max-width:700px){body.mobile-nav-open aside{display:flex;z-index:201;transform:translateX(0)}}

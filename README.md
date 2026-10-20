@@ -25,3 +25,4 @@ Las tareas, actividades, entregas, hábitos, perfil, objetivos y sesiones de con
 
 Abre **Ajustes → Paleta de colores** para elegir entre la paleta base rojo/crema, Bosque/salvia o Tierra/ámbar. La selección se conserva en el navegador. En móvil, toca ☰ para desplegar la navegación. El dashboard anima la entrada de datos con efecto de máquina de escribir y respeta la preferencia de movimiento reducido del sistema.
 
+
