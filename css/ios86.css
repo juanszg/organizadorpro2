@@ -1,0 +1,182 @@
+:root{
+  --ios86-shell:#20353c;--ios86-shell-dark:#14252b;--ios86-screen:#2b454c;--ios86-screen-alt:#3b5961;
+  --ios86-paper:#eeede2;--ios86-paper-hi:#faf9f0;--ios86-ink:#10191d;--ios86-muted:#52656a;
+  --ios86-line:#111b1f;--ios86-accent:#8eb4b5;--ios86-highlight:#c2dddd;--ios86-shadow:#091317;
+}
+html{background:var(--ios86-shell-dark);scroll-behavior:smooth}
+body,body[data-theme]{min-height:100vh;color:var(--ios86-ink);font-family:"Geist Pixel",system-ui,sans-serif;background-color:var(--ios86-shell);background-image:radial-gradient(#b8d1d11b 1px,transparent 1px),linear-gradient(135deg,#ffffff05 25%,transparent 25%,transparent 75%,#ffffff05 75%);background-size:5px 5px,10px 10px}
+body::before{position:fixed;inset:0;z-index:-1;content:"";pointer-events:none;background:linear-gradient(90deg,#0a171b55 1px,transparent 1px),linear-gradient(#0a171b55 1px,transparent 1px);background-size:32px 32px;opacity:.24}
+header{position:sticky;top:8px;z-index:12;width:min(1130px,calc(100% - 28px));height:48px;margin:12px auto 0;padding:5px 9px;gap:9px;color:var(--ios86-ink);background:var(--ios86-paper);border:2px solid var(--ios86-line);border-radius:5px;box-shadow:4px 4px 0 var(--ios86-shadow);isolation:isolate;overflow:hidden}
+header::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:repeating-linear-gradient(0deg,transparent 0 3px,#1e33360a 3px 4px)}
+header #clock{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:2;margin:0;color:var(--ios86-ink);font:700 15px/1 "Geist Pixel",sans-serif;letter-spacing:.03em;white-space:nowrap}
+header button{min-height:34px;padding:5px 9px;color:var(--ios86-ink);background:var(--ios86-paper-hi);border:1px solid var(--ios86-line);border-radius:3px;box-shadow:2px 2px 0 var(--ios86-line);font:700 12px "Geist Pixel",sans-serif}
+header button:hover{background:var(--ios86-highlight)}
+.settings-icon{background:var(--ios86-paper-hi)!important;color:var(--ios86-ink)!important;border:1px solid var(--ios86-line)!important;border-radius:3px!important;box-shadow:2px 2px 0 var(--ios86-line)!important;transform:none!important}
+.settings-icon svg{stroke:currentColor!important}
+aside{position:fixed;top:76px;bottom:14px;left:max(14px,calc((100vw - 1130px)/2));width:178px;padding:14px 11px;color:var(--ios86-paper);background-color:var(--ios86-screen);background-image:radial-gradient(#d2e3e31d 1px,transparent 1px);background-size:6px 6px;border:2px solid var(--ios86-line);box-shadow:4px 4px 0 var(--ios86-shadow);z-index:8}
+.sidetitle{padding:3px 6px 13px;color:#c3d4d4;border-bottom:1px dashed #e8f0ed66;font:700 11px "Geist Pixel",sans-serif;letter-spacing:.1em}
+aside nav{gap:5px;padding-top:12px}
+aside nav button{min-height:42px;padding:8px 7px;color:var(--ios86-paper);background:#ffffff08;border:1px solid #e8f0ed28;border-left:4px solid transparent;border-radius:3px;text-align:left;font:600 14px "Geist Pixel",sans-serif;box-shadow:none;transition:background .16s ease,transform .16s steps(2,end)}
+aside nav button:hover{background:#ffffff1b;transform:translateX(2px)}
+aside nav button.active{color:var(--ios86-ink);background:var(--ios86-paper);border-color:var(--ios86-line);border-left-color:var(--ios86-accent);box-shadow:2px 2px 0 var(--ios86-shadow)}
+aside nav button .arcade-icon{width:20px;height:20px;color:var(--ios86-highlight)}aside nav button.active .arcade-icon{color:var(--ios86-ink)}
+aside nav button i{margin-left:auto;padding:2px 6px;color:var(--ios86-ink);background:var(--ios86-highlight);border:1px solid var(--ios86-line);font:700 11px "Geist Pixel",sans-serif}
+.user{gap:9px;padding:13px 3px 3px;border-color:#e8f0ed66;color:var(--ios86-paper);font:600 13px "Geist Pixel",sans-serif}
+.user b{background:var(--ios86-paper);color:var(--ios86-ink);border:2px solid var(--ios86-line);box-shadow:2px 2px 0 var(--ios86-shadow)}
+main{width:min(930px,calc(100% - 245px));max-width:930px;margin:20px auto 50px max(218px,calc((100vw - 1130px)/2 + 198px));padding:18px 20px 34px;background-color:#d4d8ce;background-image:radial-gradient(#10232922 1px,transparent 1px);background-size:6px 6px;border:3px solid var(--ios86-line);box-shadow:6px 6px 0 var(--ios86-shadow);min-height:calc(100vh - 90px)}
+.view.active{animation:ios86-window-in .26s steps(5,end)}
+@keyframes ios86-window-in{from{opacity:.3;transform:translateY(7px) scale(.99);filter:contrast(.7)}to{opacity:1;transform:none;filter:none}}
+.heading{align-items:center;gap:14px;margin-bottom:17px;padding:1px 2px 13px;border-bottom:2px solid var(--ios86-line)}
+.heading h1{margin:5px 0;font:700 clamp(25px,3vw,36px)/1.15 "Geist Pixel",sans-serif;letter-spacing:-.045em;color:var(--ios86-ink)}
+.heading h1 span{color:#52757b}.heading p{font:600 14px/1.45 "Geist Pixel",sans-serif;color:var(--ios86-muted)}.heading small{font:700 11px "Geist Pixel",sans-serif;color:#425b60;letter-spacing:.04em}
+button{font-family:"Geist Pixel",sans-serif}
+button:focus-visible,input:focus,select:focus,textarea:focus{outline:3px solid #668d91;outline-offset:2px}
+.panel,.card{color:var(--ios86-ink);background:var(--ios86-paper);border:2px solid var(--ios86-line);border-radius:4px;box-shadow:3px 3px 0 #15282d;}
+.panel:hover,.card:hover{transform:translateY(-2px);box-shadow:5px 5px 0 #15282d}
+.bar{min-height:42px;height:auto;padding:7px 11px;color:var(--ios86-ink);background:#e2e3d9;border-bottom:2px solid var(--ios86-line);font:700 11px "Geist Pixel",sans-serif;letter-spacing:.035em}
+.bar button{min-height:32px;padding:5px 8px;color:var(--ios86-paper-hi);background:var(--ios86-screen);border:1px solid var(--ios86-line);border-radius:2px;box-shadow:2px 2px 0 var(--ios86-line);font:700 10px "Geist Pixel",sans-serif}
+.bar button:hover{color:var(--ios86-ink);background:var(--ios86-highlight)}
+.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.hero{grid-column:1/-1;color:var(--ios86-paper);background-color:var(--ios86-screen);background-image:radial-gradient(#cde2e21e 1px,transparent 1px);background-size:6px 6px;border:2px solid var(--ios86-line)}
+.hero .bar{color:var(--ios86-paper);background:var(--ios86-shell-dark);border-color:#b1c7c455}.hero-inner{align-items:center;gap:14px;padding:20px 22px}.hero-inner small{color:var(--ios86-highlight);font:700 11px "Geist Pixel",sans-serif}
+.hero h2{font:700 24px/1.35 "Geist Pixel",sans-serif;letter-spacing:.015em}.hero h2 em{color:#b1dbd8}.hero p{max-width:44ch;color:#edf3ee;font:600 14px/1.5 "Geist Pixel",sans-serif}
+.pixel{color:var(--ios86-ink);background:var(--ios86-paper-hi);border:2px solid var(--ios86-line);border-radius:2px;box-shadow:3px 3px 0 #081317;padding:8px;width:148px;font-family:"Geist Pixel",sans-serif}
+.pixel>div{color:var(--ios86-paper-hi);background:var(--ios86-shell-dark);font:700 10px "Geist Pixel",sans-serif}.pixel>b{color:var(--ios86-ink);background:var(--ios86-highlight);border:2px solid var(--ios86-line)}.pixel i{border-color:var(--ios86-line)}.pixel u{background:#557f83}.pixel small{font:700 9px "Geist Pixel",sans-serif}
+.rings{gap:8px;padding:19px 9px}.rings>div{width:78px;height:78px;border:2px solid var(--ios86-line);background:conic-gradient(var(--ios86-screen-alt) 0deg,#ccd1c8 0deg)}.rings>div:before{background:var(--ios86-paper)}.rings b{color:var(--ios86-ink);font:700 14px "Geist Pixel",sans-serif}.rings small{font:700 9px "Geist Pixel",sans-serif;color:var(--ios86-muted)}
+.mission-priority{border:3px solid var(--ios86-line);outline:2px solid var(--ios86-accent);outline-offset:2px;background:var(--ios86-paper-hi);box-shadow:5px 5px 0 var(--ios86-shadow),0 0 18px #afcaca55}
+.mission-priority::before{opacity:.09;background-image:linear-gradient(45deg,var(--ios86-screen) 25%,transparent 25%,transparent 75%,var(--ios86-screen) 75%),linear-gradient(45deg,var(--ios86-screen) 25%,transparent 25%,transparent 75%,var(--ios86-screen) 75%)}
+.mission-priority>.bar{min-height:48px;color:var(--ios86-paper-hi);background:var(--ios86-screen);border-bottom:3px solid var(--ios86-line);font-size:13px}
+.mission-priority>.bar button{background:var(--ios86-paper);color:var(--ios86-ink);border:1px solid var(--ios86-line)}
+.mission-priority .task{padding:13px 10px;border-bottom:1px dashed #738589}.mission-priority .task strong{font:700 16px/1.4 "Geist Pixel",sans-serif;color:var(--ios86-ink)}
+.task .info small,.mission-priority .task .info small{color:var(--ios86-ink)!important;background:#fff!important;border:1px solid #61777b;border-left:4px solid #42686d;border-radius:2px;font:600 12px/1.4 "Geist Pixel",sans-serif;box-shadow:1px 1px 0 #9ca9a4}
+.mission-priority .task .check{width:32px;height:32px;border:2px solid var(--ios86-line);border-radius:2px}.mission-priority .task .check.done{background:#608486;color:#fff}
+.mission-priority .add{min-height:45px;color:var(--ios86-ink);background:#dbe5df;border-top:2px solid var(--ios86-line);font:700 13px "Geist Pixel",sans-serif}
+.rings,.pad{color:var(--ios86-ink)}.task strong,.card h3{color:var(--ios86-ink);font-family:"Geist Pixel",sans-serif}.task small,.card p{color:#394d52}
+.task .check,.task .edit{color:var(--ios86-ink);background:#e5e9df;border:1px solid var(--ios86-line);border-radius:2px;box-shadow:1px 1px 0 var(--ios86-line)}
+.task .edit:hover,.task .check:hover{background:var(--ios86-highlight)}
+.add,.secondary,.presets button{color:var(--ios86-ink);background:#e4e8df;border-color:var(--ios86-line);border-radius:2px}
+.filters{background:var(--ios86-paper);border:2px solid var(--ios86-line);border-radius:3px}
+input,select,textarea{color:var(--ios86-ink);background:var(--ios86-paper-hi);border:1px solid #64777a;border-radius:2px;font:600 14px "Geist Pixel",sans-serif}
+select option{color:var(--ios86-ink);background:var(--ios86-paper-hi)}
+.month{border-color:var(--ios86-line)}.month>div{border-color:#788a89;background:#f8f7ed}.month .dayname{color:var(--ios86-paper);background:var(--ios86-screen);font:700 10px "Geist Pixel",sans-serif}.month .today b{background:var(--ios86-highlight);color:var(--ios86-ink)}
+.chip,.chip.event,.evt{color:var(--ios86-ink)!important;background:#fff!important;border:1px solid #64777a;border-left:4px solid var(--ios86-screen-alt)}
+.cards{gap:14px}.card{padding:16px}.card h3{font-size:15px}.card p{font:600 13px/1.5 "Geist Pixel",sans-serif}
+.caltools button,.presets button{min-height:36px;border:1px solid var(--ios86-line);box-shadow:2px 2px 0 var(--ios86-line);font:700 11px "Geist Pixel",sans-serif}
+.launcher-panel{margin:0 0 17px;padding:0;overflow:hidden;background:var(--ios86-paper)}.launcher-panel>.bar{min-height:40px}.launcher-panel>.bar small{color:var(--ios86-muted);font:700 9px "Geist Pixel",sans-serif}
+.launcher-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px;padding:12px 10px 14px;background-color:var(--ios86-screen);background-image:radial-gradient(#d2e3e31b 1px,transparent 1px);background-size:6px 6px}
+.launcher-app{min-width:0;min-height:104px;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;gap:6px;padding:5px 3px;color:var(--ios86-paper-hi);background:transparent;border:1px solid transparent;border-radius:3px;box-shadow:none;font:600 12px/1.15 "Geist Pixel",sans-serif;text-align:center;white-space:normal}
+.launcher-app:hover{background:#ffffff13;border-color:#e2eeee55;transform:translateY(-2px)}
+.launcher-app .arcade-icon{width:62px;height:62px;padding:7px;color:var(--ios86-ink);background:var(--ios86-paper-hi);border:2px solid var(--ios86-line);outline:1px solid #d6e1dc;box-shadow:3px 3px 0 #101a1d;border-radius:2px;transition:transform .15s steps(3,end),background .15s ease}
+.launcher-app .arcade-icon svg{filter:none}
+.launcher-app:hover .arcade-icon{color:var(--ios86-screen);background:#d5e4dc;transform:translateY(-2px)}
+.launcher-app>span:not(.arcade-icon){max-width:100%;text-shadow:1px 1px 0 #0b171b;overflow-wrap:anywhere}
+.arcade-icon{color:inherit}.arcade-icon svg{shape-rendering:crispEdges;image-rendering:pixelated}
+aside nav .arcade-icon{color:var(--ios86-highlight)}aside nav button.active .arcade-icon{color:var(--ios86-ink)}
+.assistant-title-row .assistant-trigger{right:20px;bottom:20px;width:86px;height:86px;border:2px solid var(--ios86-line);background:var(--ios86-paper);box-shadow:4px 4px 0 var(--ios86-shadow),0 0 0 3px var(--ios86-accent);border-radius:4px}
+.assistant-title-row .assistant-trigger img{mix-blend-mode:multiply;transform:scale(1.12)}
+.assistant-title-row .robot-bubble{right:20px;left:auto;bottom:119px;background:var(--ios86-paper-hi);color:var(--ios86-ink);border:2px solid var(--ios86-line);border-radius:3px;box-shadow:4px 4px 0 var(--ios86-shadow);font:700 13px/1.45 "Geist Pixel",sans-serif}
+.assistant-chat{background:var(--ios86-paper);border:3px solid var(--ios86-line);border-radius:4px;box-shadow:7px 7px 0 var(--ios86-shadow)}
+.chat-head{color:var(--ios86-paper);background:var(--ios86-screen);border-bottom:3px solid var(--ios86-line)}.chat-head strong,.chat-head small{font-family:"Geist Pixel",sans-serif}.chat-head button{color:var(--ios86-paper);background:transparent}
+.chat-message{font-family:"Geist Pixel",sans-serif}.chat-message.bot{color:var(--ios86-ink);background:#faf9f0;border:1px solid #687b7d;border-radius:3px}.chat-message.user{color:#fff;background:var(--ios86-screen);border-radius:3px}
+.chat-prompts button,.chat-form button{min-height:40px;color:var(--ios86-ink);background:var(--ios86-highlight);border:1px solid var(--ios86-line);border-radius:2px;font-family:"Geist Pixel",sans-serif;box-shadow:2px 2px 0 var(--ios86-line)}
+.chat-form input{font:600 16px "Geist Pixel",sans-serif}
+.modalbar{color:var(--ios86-paper);background:var(--ios86-screen);border-bottom:2px solid var(--ios86-line)}
+.modalbar button{color:var(--ios86-paper);background:transparent}.modalbar .arcade-icon{display:none!important}
+dialog{color:var(--ios86-ink);background:var(--ios86-paper);border:3px solid var(--ios86-line);border-radius:3px;box-shadow:7px 7px 0 var(--ios86-shadow)}
+dialog::backdrop{background:#071217bb;backdrop-filter:blur(2px)}#modalBody label{color:#344b50;font:700 12px "Geist Pixel",sans-serif}
+#toast{color:var(--ios86-paper-hi);background:var(--ios86-screen);border:2px solid var(--ios86-line);box-shadow:3px 3px 0 var(--ios86-shadow);font:700 12px "Geist Pixel",sans-serif}
+.themes button{color:var(--ios86-ink);background:var(--ios86-paper-hi);border:1px solid var(--ios86-line);box-shadow:2px 2px 0 var(--ios86-line);font:700 11px "Geist Pixel",sans-serif}
+.themes button.selected{outline:3px solid var(--ios86-accent)}
+.swatches i{width:14px;border:1px solid var(--ios86-line)}
+.text-size-setting label, label{color:var(--ios86-ink);font-family:"Geist Pixel",sans-serif}
+hr{border-color:#8a9a96}
+.nav-scrim{display:none}
+@media(max-width:900px){main{width:calc(100% - 224px);margin-left:210px;padding:16px}.launcher-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.grid{grid-template-columns:1fr 1fr}.rings{gap:5px}}
+@media(max-width:700px){
+ html,body,body[data-theme]{min-height:100%;background-color:var(--ios86-shell);background-image:radial-gradient(#d8e9e91c 1px,transparent 1px);background-size:5px 5px}
+ header{top:0;width:100%;height:58px;margin:0;padding:5px 8px;grid-template-columns:44px minmax(0,1fr) 42px 42px;gap:6px;border-width:0 0 3px;border-radius:0;box-shadow:0 3px 0 var(--ios86-shadow)}header #clock{font-size:12px}
+ header .mobile-menu{width:42px;height:42px;min-height:42px;padding:8px;border:2px solid var(--ios86-line);border-radius:3px;background:var(--ios86-paper);box-shadow:2px 2px 0 var(--ios86-line)}.mobile-menu span{height:3px;background:var(--ios86-ink);box-shadow:none}
+ header button[data-action="new-task"]{width:42px;height:42px;min-width:42px;min-height:42px;background:var(--ios86-paper);border:1px solid var(--ios86-line);box-shadow:2px 2px 0 var(--ios86-line)}header .settings-icon{width:42px;height:42px;min-width:42px;min-height:42px;background:var(--ios86-paper)!important}
+ aside{top:58px;bottom:0;left:0;width:min(330px,88vw);padding:16px 12px;color:var(--ios86-paper);background:var(--ios86-screen);border:0;border-right:3px solid var(--ios86-line);box-shadow:8px 0 0 #07121766;transform:translateX(-110%);transition:transform .28s steps(5,end);z-index:25;overflow:auto}
+ body.mobile-nav-open aside{transform:translateX(0)}body.mobile-nav-open::after{content:"";position:fixed;inset:58px 0 0;background:#081318c9;backdrop-filter:blur(2px);z-index:24}
+ aside nav button{min-height:56px;padding:10px 12px;font:700 16px "Geist Pixel",sans-serif;border-radius:2px;background:#ffffff0d}aside nav button.active{background:var(--ios86-paper);color:var(--ios86-ink);border-left-color:var(--ios86-accent)}aside nav button .arcade-icon{width:23px;height:23px}
+ .sidetitle{font-size:13px}.user span{font-size:16px}
+ main{width:calc(100% - 16px);max-width:none;margin:12px 8px 24px;padding:14px 10px 24px;min-height:calc(100dvh - 72px);border-width:2px;box-shadow:4px 4px 0 var(--ios86-shadow)}
+ #dashboard.view.active{display:flex;flex-direction:column}#dashboard>.heading{order:0}#dashboard>.grid{order:1}#dashboard>.launcher-panel{order:2}
+ .heading{margin-bottom:12px;padding-bottom:11px;align-items:flex-start}.heading h1{font-size:clamp(24px,7vw,32px)}.heading p{font-size:15px}.heading small{font-size:11px}.heading>button{min-width:44px;min-height:44px;font-size:0;padding:8px}.heading>button .arcade-icon{width:23px;height:23px}
+ .assistant-title-row{gap:0}.assistant-title-row .assistant-trigger{right:12px;bottom:12px;width:72px;height:72px}.assistant-title-row .robot-bubble{right:12px;left:auto;bottom:98px;width:min(278px,calc(100vw - 28px));font-size:13px}
+ .grid{display:flex;flex-direction:column;gap:15px}.grid>.panel{width:100%;min-height:0;border-radius:3px}.grid>.panel:not(.hero):not(.mission-priority){order:2}.grid>.hero{order:1;min-height:250px!important}.mission-priority{order:0;min-height:300px!important;transform:none}
+ .mission-priority>.bar{min-height:55px;padding:8px;font-size:13px}.mission-priority>.bar button{min-height:42px;font-size:11px;padding:6px}.mission-priority .task{min-height:78px;padding:13px 7px;gap:8px}.mission-priority .task strong{font-size:17px}.mission-priority .task .info small{font-size:12px;padding:5px 7px;line-height:1.45}.mission-priority .task .edit{min-width:40px;min-height:40px}.mission-priority .add{min-height:52px;font-size:15px}
+ .hero-inner{padding:17px 12px;gap:8px}.hero h2{font-size:20px}.hero p{font-size:15px}.hero-inner small{font-size:10px}.pixel{width:104px;padding:6px}.pixel>div{margin:-6px -6px 6px;font-size:8px}.pixel small{font-size:8px}
+ .launcher-panel{margin-top:1px;margin-bottom:16px;border-radius:3px}.launcher-panel>.bar{min-height:42px;padding:7px 8px;font-size:11px}.launcher-panel>.bar small{font-size:8px}.launcher-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:2px;padding:9px 5px 11px}.launcher-app{min-height:99px;gap:5px;padding:4px 1px;font-size:12px}.launcher-app .arcade-icon{width:60px;height:60px;padding:7px}
+ .panel:not(.mission-priority)>.bar{min-height:46px;padding:8px;font-size:11px}.panel:not(.mission-priority)>.bar button{min-height:40px;padding:5px;font-size:10px}
+ .rings{gap:2px;padding:16px 5px}.rings>div{width:70px;height:70px}.rings b{font-size:13px}.rings small{font-size:8px}.pad{padding:14px}
+ .task{min-height:66px;padding:11px 2px;gap:7px}.task strong{font-size:15px}.task small{font-size:12px}.task .check{width:33px;height:33px}.task .edit{width:38px;height:38px}
+ .cards{grid-template-columns:1fr;gap:12px}.card{padding:15px}.card h3{font-size:16px}.card p{font-size:14px}.filters{display:grid;grid-template-columns:1fr;padding:10px;gap:8px}.filters input{grid-column:auto}
+ .center #timer{font-size:40px}.center select,button,input,select,textarea{min-height:44px;font-size:16px}.presets{gap:5px}.presets button{padding:7px;font-size:11px}.habit{min-height:56px;font-size:14px}
+ .caltools{flex-wrap:wrap;gap:6px}.caltools h2{font-size:14px}.caltools button{min-height:42px;padding:7px}.month>div{min-height:49px;padding:3px 1px}.month .dayname{font-size:8px}.month b{width:24px;height:24px;font-size:12px}.chip{font-size:9px;padding:2px;white-space:normal}.evt{padding:10px;font-size:13px}
+ .assistant-chat{right:8px;bottom:8px;width:calc(100vw - 16px);height:min(620px,calc(100dvh - 74px));z-index:40;border-radius:3px}.chat-head{padding:9px}.chat-head strong{font-size:14px}.chat-head small{font-size:10px}.chat-message{font-size:15px;padding:9px}.chat-form input{font-size:16px!important}.chat-prompts{padding:6px;gap:5px}.chat-prompts button{min-height:42px;font-size:10px;padding:6px}
+ #modal{width:calc(100% - 16px);max-height:92dvh;border-radius:3px}#modalBody{padding:12px;gap:10px}#modalBody label,label{font-size:12px}dialog footer{padding:0 12px 12px}dialog footer button{min-height:44px;font-size:13px}
+}
+@media(max-width:370px){header{grid-template-columns:40px minmax(0,1fr) 40px 40px;gap:4px;padding:4px}.mobile-menu,header button[data-action="new-task"],header .settings-icon{width:40px;min-width:40px;height:40px;min-height:40px}.launcher-app .arcade-icon{width:54px;height:54px}.launcher-app{min-height:92px;font-size:11px}.rings>div{width:64px;height:64px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+/* Task cards: readable arcade interface */
+body,body[data-theme]{font-family:"Quantico","Geist Pixel",system-ui,sans-serif}
+.task-card-title,.task-card-priority,.task-card-actions button{font-family:"Geist Pixel",sans-serif}
+.task-card-description,.task-card-meta{font-family:"Quantico","Geist Pixel",sans-serif}
+.task-cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(245px,1fr));gap:16px;padding:4px}
+.task-card{aspect-ratio:1/1;min-height:280px;display:flex;flex-direction:column;align-items:flex-start;gap:9px;padding:16px;color:#20282c;border:2px solid #20282c;border-radius:4px;box-shadow:4px 4px 0 #20282c;transition:transform .22s cubic-bezier(.2,.8,.2,1),box-shadow .22s ease,filter .22s ease}
+.task-card:hover{transform:translateY(-5px) scale(1.015);box-shadow:7px 8px 0 #20282c;filter:saturate(1.08)}
+.task-card.priority-baja{background:#dcebdc}.task-card.priority-media{background:#dceaf2}.task-card.priority-alta{background:#f6edc8}.task-card.priority-urgente{background:#f2dada}
+.task-card.is-done{opacity:.72}.task-card.is-done .task-card-title{text-decoration:line-through}
+.task-card-top{display:flex;width:100%;align-items:flex-start;justify-content:space-between}.task-card-icon{width:54px;height:54px;display:grid;place-items:center;color:#142b30;background:#ffffffa8;border:2px solid #26383a;box-shadow:2px 2px 0 #26383a}.task-card-icon svg{width:38px;height:38px;shape-rendering:crispEdges;image-rendering:pixelated}
+.task-card-check{width:34px;height:34px;display:grid;place-items:center;color:#15292e;background:#fff;border:2px solid #26383a;box-shadow:2px 2px 0 #26383a;font:700 19px "Quantico",sans-serif;cursor:pointer}
+.task-card-priority{padding:3px 7px;background:#fff;border:1px solid #526066;font-size:11px;font-weight:700;letter-spacing:.06em}.task-card-title{margin:0;font-size:19px;font-weight:700;line-height:1.22;overflow-wrap:anywhere}.task-card-description{margin:0;font-size:15px;font-weight:700;line-height:1.4;overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.task-card-meta{margin-top:auto;font-size:12px;font-weight:700}
+.task-card-actions{display:flex;width:100%;gap:8px;margin-top:2px;padding-top:9px;border-top:1px solid #344448}.task-card-actions button{flex:1;min-height:38px;color:#f5f3f4;background:#243b41;border:1px solid #17272b;box-shadow:2px 2px 0 #17272b;font-size:12px;font-weight:700;cursor:pointer;transition:transform .15s ease,background .15s ease}.task-card-actions button:hover{background:#426b71;transform:translateY(-2px)}
+.task-card .arcade-icon{display:none!important}
+@media(max-width:700px){.task-cards-grid{grid-template-columns:minmax(0,1fr);gap:16px;padding:3px}.task-card{width:100%;max-width:none;min-height:330px;aspect-ratio:1/1;padding:17px;gap:10px}.task-card-icon{width:62px;height:62px}.task-card-icon svg{width:44px;height:44px}.task-card-title{font-size:21px}.task-card-description{font-size:16px;line-height:1.48;-webkit-line-clamp:4}.task-card-priority{font-size:12px}.task-card-meta{font-size:13px}.task-card-actions button{min-height:44px;font-size:13px}}
+@media(min-width:701px) and (max-width:950px){.task-cards-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+.task-card-check .arcade-icon,.task-card-actions .arcade-icon{display:none!important}
+
+/* Theme palettes now drive the full retro shell and its launcher icons. */
+body[data-theme="base"]{--ios86-shell:#202326;--ios86-shell-dark:#0b090a;--ios86-screen:#161a1d;--ios86-screen-alt:#660708;--ios86-paper:#f5f3f4;--ios86-paper-hi:#ffffff;--ios86-ink:#0b090a;--ios86-muted:#5d5758;--ios86-line:#0b090a;--ios86-accent:#e5383b;--ios86-highlight:#d3d3d3;--ios86-shadow:#0b090a}
+body[data-theme="forest"]{--ios86-shell:#354f52;--ios86-shell-dark:#2f3e46;--ios86-screen:#354f52;--ios86-screen-alt:#52796f;--ios86-paper:#cad2c5;--ios86-paper-hi:#f0f2e9;--ios86-ink:#2f3e46;--ios86-muted:#354f52;--ios86-line:#2f3e46;--ios86-accent:#84a98c;--ios86-highlight:#cad2c5;--ios86-shadow:#2f3e46}
+body[data-theme="earth"]{--ios86-shell:#432818;--ios86-shell-dark:#2e1b11;--ios86-screen:#6f1d1b;--ios86-screen-alt:#99582a;--ios86-paper:#ffe6a7;--ios86-paper-hi:#fff4d4;--ios86-ink:#432818;--ios86-muted:#6f1d1b;--ios86-line:#432818;--ios86-accent:#bb9457;--ios86-highlight:#ffe6a7;--ios86-shadow:#2e1b11}
+body[data-theme="ocean"]{--ios86-shell:#1c2541;--ios86-shell-dark:#0b132b;--ios86-screen:#1c2541;--ios86-screen-alt:#3a506b;--ios86-paper:#e5f6f4;--ios86-paper-hi:#ffffff;--ios86-ink:#0b132b;--ios86-muted:#3a506b;--ios86-line:#0b132b;--ios86-accent:#5bc0be;--ios86-highlight:#6fffe9;--ios86-shadow:#0b132b}
+body[data-theme="blue"]{--ios86-shell:#150578;--ios86-shell-dark:#0e0e52;--ios86-screen:#150578;--ios86-screen-alt:#192bc2;--ios86-paper:#e8effa;--ios86-paper-hi:#ffffff;--ios86-ink:#0e0e52;--ios86-muted:#192bc2;--ios86-line:#0e0e52;--ios86-accent:#449dd1;--ios86-highlight:#78c0e0;--ios86-shadow:#0e0e52}
+html{background:var(--ios86-shell-dark)}body,body[data-theme]{background-color:var(--ios86-shell);background-image:radial-gradient(color-mix(in srgb,var(--ios86-highlight) 17%,transparent) 1px,transparent 1px),linear-gradient(135deg,#ffffff05 25%,transparent 25%,transparent 75%,#ffffff05 75%);background-size:5px 5px,10px 10px;font-variation-settings:"ELSH" 1}
+header{color:var(--ios86-paper-hi);background:var(--ios86-screen);border-color:var(--ios86-line);box-shadow:4px 4px 0 var(--ios86-shadow)}header #clock{color:var(--ios86-paper-hi)}header button,header .settings-icon{color:var(--ios86-paper-hi)!important;background:var(--ios86-screen-alt)!important;border-color:var(--ios86-accent)!important;box-shadow:2px 2px 0 var(--ios86-line)!important}
+main{background-color:var(--ios86-paper);background-image:radial-gradient(color-mix(in srgb,var(--ios86-screen) 13%,transparent) 1px,transparent 1px);background-size:6px 6px;border-color:var(--ios86-accent);box-shadow:6px 6px 0 var(--ios86-shadow)}
+.panel,.card,.launcher-panel,.filters{border-color:var(--ios86-accent);box-shadow:3px 3px 0 var(--ios86-shadow)}.bar{background:var(--ios86-highlight);border-color:var(--ios86-accent)}.mission-priority{outline-color:var(--ios86-accent);box-shadow:5px 5px 0 var(--ios86-shadow),0 0 20px color-mix(in srgb,var(--ios86-accent) 40%,transparent)}
+.launcher-grid{background-color:var(--ios86-screen);background-image:radial-gradient(color-mix(in srgb,var(--ios86-accent) 28%,transparent) 1px,transparent 1px)}
+.launcher-app .arcade-icon{width:66px;height:66px;padding:6px;color:var(--ios86-highlight);background-color:#031012;border:2px solid var(--ios86-accent);outline:2px solid color-mix(in srgb,var(--ios86-accent) 35%,transparent);box-shadow:0 0 12px color-mix(in srgb,var(--ios86-accent) 28%,transparent),3px 3px 0 var(--ios86-shadow);border-radius:4px;clip-path:polygon(12% 0,88% 0,100% 12%,100% 88%,88% 100%,12% 100%,0 88%,0 12%)}
+.launcher-app .arcade-icon svg{width:100%;height:100%;filter:drop-shadow(0 0 2px var(--ios86-accent))}.launcher-app:hover .arcade-icon{color:var(--ios86-paper-hi);background-color:var(--ios86-screen-alt);border-color:var(--ios86-highlight);box-shadow:0 0 16px color-mix(in srgb,var(--ios86-accent) 55%,transparent),3px 3px 0 var(--ios86-shadow)}
+aside nav button .arcade-icon{color:var(--ios86-highlight);background:#031012;border:1px solid var(--ios86-accent);box-shadow:0 0 8px color-mix(in srgb,var(--ios86-accent) 25%,transparent)}aside nav button.active .arcade-icon{color:var(--ios86-ink);background:var(--ios86-highlight)}
+button,input,select,textarea{font-variation-settings:"ELSH" 1}.task-card-title,.task-card-priority,.task-card-actions button{font-family:"Geist Pixel","Quantico",sans-serif;font-variation-settings:"ELSH" 1}
+
+.launcher-app .arcade-icon{padding:0;border:0;outline:0;box-shadow:none;background:transparent;clip-path:none}.launcher-app .arcade-icon img{display:block;width:100%;height:100%;object-fit:contain;image-rendering:pixelated;filter:drop-shadow(0 0 5px color-mix(in srgb,var(--ios86-accent) 52%,transparent));transition:transform .18s ease,filter .18s ease}.launcher-app:hover .arcade-icon img{transform:scale(1.06);filter:drop-shadow(0 0 9px var(--ios86-accent))}
+aside nav button .arcade-icon{display:inline-grid;place-items:center;width:25px;height:25px;padding:0;background:transparent;border:0;box-shadow:none}.arcade-icon img{width:100%;height:100%;object-fit:contain;image-rendering:pixelated}.launcher-app:hover .arcade-icon{background:transparent;border:0;box-shadow:none}
+
+.task-card-priority{border-color:var(--ios86-accent);box-shadow:2px 2px 0 color-mix(in srgb,var(--ios86-accent) 48%,transparent)}.task-card-actions button{color:var(--ios86-paper-hi);background:var(--ios86-screen-alt);border-color:var(--ios86-accent);box-shadow:2px 2px 0 var(--ios86-shadow)}.task-card-actions button:hover{background:var(--ios86-screen)}
+@media(max-width:700px){aside nav button .arcade-icon{width:31px;height:31px}}
+
+/* Geist Pixel: pin the requested family on the two dashboard headings and labels. */
+.heading h1,.assistant-title-row h1,.launcher-panel>.bar,.launcher-panel>.bar span,.launcher-panel>.bar small,.launcher-app,.launcher-app>span:not(.arcade-icon){font-family:"Geist Pixel","Quantico",sans-serif!important;font-variation-settings:"ELSH" 1!important}
+.assistant-title-row h1{font-weight:700}.launcher-panel>.bar,.launcher-panel>.bar span,.launcher-panel>.bar small,.launcher-app>span:not(.arcade-icon){font-weight:700}
+header #clock{font-size:20px}
+.task-card,.task-card-icon{background-image:none!important}
+@media(max-width:700px){
+ #mobileMenu,#navScrim{display:none!important}
+ header{display:flex;justify-content:space-between;grid-template-columns:none;height:58px;padding:5px 12px}header #clock{font-size:clamp(15px,4.5vw,18px);letter-spacing:.04em}header button[data-action="new-task"]{margin-left:auto;width:42px;min-width:42px;padding:5px;font-size:0}header button[data-action="new-task"] .arcade-icon{width:24px;height:24px}header .settings-icon{margin-left:4px}
+ aside{position:fixed;inset:auto 0 0;width:100%;height:calc(78px + env(safe-area-inset-bottom));padding:5px 5px env(safe-area-inset-bottom);display:block;overflow:hidden;color:var(--ios86-paper-hi);background:var(--ios86-screen);border:0;border-top:2px solid var(--ios86-accent);box-shadow:0 -4px 0 var(--ios86-shadow);transform:none!important;z-index:35}
+ aside .sidetitle,aside .user{display:none!important}aside nav{display:flex;align-items:center;gap:3px;width:100%;height:100%;padding:0 3px;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;overscroll-behavior-x:contain;touch-action:pan-x}aside nav::-webkit-scrollbar{display:none}
+ aside nav button{position:relative;display:flex;flex:0 0 62px;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-height:64px;height:64px;padding:3px 2px;color:var(--ios86-paper-hi);background:transparent;border:0;border-bottom:3px solid transparent;border-radius:3px;text-align:center;font:700 10px/1.1 "Geist Pixel","Quantico",sans-serif;white-space:normal;box-shadow:none}
+ aside nav button.active{color:var(--ios86-highlight);background:color-mix(in srgb,var(--ios86-accent) 14%,transparent);border-bottom-color:var(--ios86-accent);box-shadow:none}aside nav button:hover{transform:none}
+ aside nav button .arcade-icon{display:grid;width:36px;height:36px;flex:0 0 36px;place-items:center;background:transparent;border:0;box-shadow:none}aside nav button i{position:absolute;top:1px;right:2px;margin:0;padding:1px 4px;font:700 9px "Geist Pixel",sans-serif}
+ main{width:calc(100% - 10px);margin:8px 5px 0;padding:12px 9px calc(18px + 88px + env(safe-area-inset-bottom));min-height:calc(100dvh - 66px);border-width:2px;box-shadow:3px 3px 0 var(--ios86-shadow)}
+ .launcher-panel{display:none!important}#dashboard>.grid{order:1}.heading{gap:8px}.assistant-title-row h1{font-size:clamp(23px,7vw,31px);line-height:1.2}
+ .grid{gap:11px}.mission-priority{min-height:0!important}.mission-priority>.bar{min-height:46px}.hero-inner{padding:14px 10px}.panel:not(.mission-priority)>.bar{min-height:42px}
+}
+@media(prefers-reduced-motion:no-preference){aside nav button.active .arcade-icon img{filter:drop-shadow(0 0 5px var(--ios86-accent))}}

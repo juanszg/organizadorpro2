@@ -8,10 +8,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Quantico:wght@400;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Geist+Pixel:ELSH@1&family=Quantico:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/arcade-mobile.css">
+    <link rel="stylesheet" href="css/ios86.css">
 </head>
 
 <body>
@@ -36,7 +37,7 @@
     <main>
         <section id="dashboard" class="view active">
             <div class="heading">
-                <div><small>LUNES, 20 OCTUBRE 2026　● SISTEMA LISTO</small>
+                <div><small id="systemDate">SISTEMA LISTO</small>
                     <div class="assistant-title-row">
                         <h1>Tu centro de control<span>_</span></h1><button type="button" id="assistantToggle"
                             class="assistant-trigger" aria-label="Abrir asistente virtual" aria-expanded="false"><img
@@ -46,6 +47,20 @@
                     <p>Un paso a la vez. Hoy también cuenta.</p>
                 </div><button data-action="new-task">＋ Nueva tarea</button>
             </div>
+            <section class="launcher-panel panel" aria-label="Acceso rápido a las secciones">
+                <div class="bar"><span>APPS / ACCESO RÁPIDO</span><small>TOCA UN ICONO PARA ABRIR</small></div>
+                <div class="launcher-grid">
+                    <button class="launcher-app" data-view="dashboard"><span>Escritorio</span></button>
+                    <button class="launcher-app" data-view="tasks"><span>Mis tareas</span></button>
+                    <button class="launcher-app" data-view="calendar"><span>Calendario</span></button>
+                    <button class="launcher-app" data-view="agenda"><span>Agenda</span></button>
+                    <button class="launcher-app" data-view="deliveries"><span>Entregas</span></button>
+                    <button class="launcher-app" data-view="habits"><span>Hábitos</span></button>
+                    <button class="launcher-app" data-view="stats"><span>Estadísticas</span></button>
+                    <button class="launcher-app" data-view="profile"><span>Perfil</span></button>
+                    <button class="launcher-app" data-view="settings"><span>Ajustes</span></button>
+                </div>
+            </section>
             <div class="grid">
                 <article class="panel hero">
                     <div class="bar">MENSAJE DEL SISTEMA <span>•••</span></div>
